@@ -11,13 +11,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.grey[500],
+        backgroundColor: Colors.grey[900],
         body: Column(
           children: [
-            Container(
-              color: Colors.blue,
+            SizedBox(
               height: 420,
               width: 500,
               child: Stack(children: const [
@@ -26,7 +25,7 @@ class HomePage extends StatelessWidget {
                   left: 20,
                   child: Icon(
                     Icons.arrow_back,
-                    color: Colors.black,
+                    color: Colors.white,
                     size: 40,
                   ),
                 ),
@@ -35,7 +34,7 @@ class HomePage extends StatelessWidget {
                   left: 350,
                   child: Icon(
                     Icons.settings,
-                    color: Colors.black,
+                    color: Colors.white,
                     size: 40,
                   ),
                 ),
@@ -71,8 +70,7 @@ class HomePage extends StatelessWidget {
                     )),
               ]),
             ),
-            Container(
-              color: Colors.green,
+            SizedBox(
               height: 512,
               width: 500,
               child: Column(
@@ -96,13 +94,36 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    height: 10,
+                    height: 15,
                   ),
                   const ExternalButtons(
                     leadingIcon: Icons.shopping_bag_outlined,
                     textButton: "Your Order History",
                     lastIcon: Icons.arrow_forward,
-                  )
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const ExternalButtons(
+                    leadingIcon: Icons.help_outline_rounded,
+                    textButton: "Help and Support",
+                    lastIcon: Icons.arrow_forward,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const ExternalButtons(
+                    leadingIcon: Icons.card_giftcard_outlined,
+                    textButton: "Load Gift Voucher",
+                    lastIcon: Icons.arrow_forward,
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  const ExternalButtons(
+                    leadingIcon: Icons.logout_outlined,
+                    textButton: "Logout",
+                  ),
                 ],
               ),
             )
@@ -112,4 +133,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

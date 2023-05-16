@@ -15,7 +15,7 @@ class ExternalButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[500],
+        color: Colors.grey[700],
         borderRadius: BorderRadius.circular(50),
       ),
       width: 350,
@@ -31,14 +31,18 @@ class ExternalButtons extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            width: 5,
+            width: 7,
           ),
           Text(
             textButton,
-            style: const TextStyle(fontFamily: "Verdana", fontSize: 23),
+            style: const TextStyle(
+                fontFamily: "Verdana", fontSize: 23, color: Colors.white),
+          ),
+          const SizedBox(
+            width: 5,
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 35),
+            padding: const EdgeInsets.only(left: 30),
             child: Icon(
               lastIcon,
               size: 30,
