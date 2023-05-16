@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'widgets/external_buttons.dart';
 
 void main(List<String> args) {
-  runApp(HomePage());
+  runApp(const HomePage());
 }
 
 class HomePage extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       home: Scaffold(
         backgroundColor: Colors.grey[500],
         body: Column(
@@ -70,9 +71,45 @@ class HomePage extends StatelessWidget {
                     )),
               ]),
             ),
+            Container(
+              color: Colors.green,
+              height: 512,
+              width: 500,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    width: 350,
+                    height: 70,
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Upgrade to Premium",
+                      style: TextStyle(
+                        fontSize: 23,
+                        fontFamily: "Verdana",
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const ExternalButtons(
+                    leadingIcon: Icons.shopping_bag_outlined,
+                    textButton: "Your Order History",
+                    lastIcon: Icons.arrow_forward,
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
