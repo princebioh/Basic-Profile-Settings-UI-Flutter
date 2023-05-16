@@ -26,16 +26,16 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     Icons.arrow_back,
                     color: Colors.white,
-                    size: 40,
+                    size: 35,
                   ),
                 ),
                 Positioned(
                   top: 60,
-                  left: 350,
+                  left: 370,
                   child: Icon(
                     Icons.settings,
                     color: Colors.white,
-                    size: 40,
+                    size: 35,
                   ),
                 ),
                 Positioned(
